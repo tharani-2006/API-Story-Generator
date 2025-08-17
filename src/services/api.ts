@@ -2,8 +2,8 @@ import axios from 'axios';
 import { getAuthHeaders } from './supabase';
 import type { Story, GenerateStoryRequest, GenerateStoryResponse, ApiResponse } from '../types';
 
-// Use environment variable for API base URL, fallback to localhost for development
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+// Use environment variable for API base URL
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 // Create axios instance
 const apiClient = axios.create({
